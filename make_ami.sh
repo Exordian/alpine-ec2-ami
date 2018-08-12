@@ -121,6 +121,7 @@ install_core_packages() {
 		aws-ena-driver-vanilla@testing \
 		chrony \
 		e2fsprogs \
+                e2fsprogs-extra \
 		linux-vanilla \
 		mkinitfs \
 		openssh \
