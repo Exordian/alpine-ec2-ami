@@ -133,11 +133,11 @@ install_core_packages() {
     # Disable starting getty for physical ttys because they're all inaccessible
     # anyhow. With this configuration boot messages will still display in the
     # EC2 console.
-    sed -Ei '/^tty\d/s/^/#/' /etc/inittab
+    sed -Ei '/^tty\d/s/^/#/' "$target"/etc/inittab
 
     # Make it a little more obvious who is logged in by adding username to the
     # prompt
-    sed -i "s/^export PS1='/&\\\\u@/" /etc/profile
+    sed -i "s/^export PS1='/&\\\\u@/" "$target"/etc/profile
 }
 
 create_initfs() {
